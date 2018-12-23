@@ -24,7 +24,7 @@ body {
 }
 
 a {
-    color: #b4d7a8;
+    color: #ff93f5;
     text-decoration: none;
 }
 
@@ -37,6 +37,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     left: 0;
     width: 100%;
     height: 50px;
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.95);
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -73,7 +74,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     margin-right: 5%;
     width: 44px;
     height: 100%;
-    background: url("../img/cd-icon-menu.svg") no-repeat center center;
+    background: url("../img/baseline-menu-24px.svg") no-repeat center center;
     background-size: 44px 44px;
     cursor: pointer;
 }
@@ -187,7 +188,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
 }
 
 .cd-fixed-bg.cd-fixed-bg--3 {
-    background-image: url("../img/cd-background-3.jpg");
+    background-image: url("../img/background3.PNG");
 }
 
 .cd-fixed-bg.cd-fixed-bg--4 {
@@ -262,4 +263,13 @@ div.media {
 .left-aligned {
     width: 45%;
     float: left;
+}
+
+hr {
+    background-color: rgba(255,147,245,0.41);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 3em;
+    border: none;
+    height: 8px;
 }
