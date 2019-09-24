@@ -4,7 +4,7 @@
 
 #logo {
     color: #ff93f5;
-    font-size: 5.0rem;
+    font-size: 4.0rem;
 }
 
 *, *::after, *::before {
@@ -60,12 +60,12 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 890px) {
     .cd-main-header {
-        height: 70px;
+        height: 50px;
     }
     .cd-main-header__logo {
-        margin: 0 0 0 5%;
+        margin: 0 0 5% 5%;
     }
 }
 
@@ -105,13 +105,15 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     color: #8e7d7f;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 890px) {
     .cd-main-nav {
         /* reset style */
-        width: auto;
-        height: auto;
-        background: none;
-        cursor: auto;
+        width: 44px;
+        height: 100%;
+        background: url("../img/baseline-menu-24px.svg") no-repeat center center;
+        background-size: 44px 44px;
+        cursor: pointer;
+        margin-right: 5%;
     }
     .cd-main-nav__list {
         /* reset style */
@@ -168,7 +170,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     width: 90%;
-    max-width: 1170px;
+    max-width: 95%;
     margin: 0 auto;
     text-align: center;
     font-size: 3rem;
@@ -177,6 +179,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
 .cd-fixed-bg h1, .cd-fixed-bg h2 {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     color: white;
+    font-size: 3rem;
 }
 
 .cd-fixed-bg.cd-fixed-bg--1 {
@@ -184,7 +187,7 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
 }
 
 .cd-fixed-bg.cd-fixed-bg--2 {
-    background-image: url("../img/background2.png");
+    background-image: url("../img/background4.jpg");
 }
 
 .cd-fixed-bg.cd-fixed-bg--3 {
