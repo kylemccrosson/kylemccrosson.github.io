@@ -28,10 +28,7 @@ a {
     text-decoration: none;
 }
 
-/* --------------------------------
-Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
--------------------------------- */
-.cd-main-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,23 +41,23 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     z-index: 3;
 }
 
-.cd-main-header:after {
+.header:after {
     /* clearfix */
     content: "";
     display: table;
     clear: both;
 }
 
-.cd-main-header__logo {
+.header-logo {
     float: left;
     margin: 0 0 0 5%;
 }
 
-.cd-main-header__logo img {
+.header-logo img {
     display: block;
 }
 
-.cd-main-nav {
+.navbar {
     float: right;
     margin-right: 5%;
     width: 44px;
@@ -70,23 +67,14 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     cursor: pointer;
 }
 
-.cd-main-nav__list {
+.navbar-list {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
 }
 
-.cd-main-nav__list.cd-main-nav__list--is-visible {
-    -webkit-transform: translateY(50px);
-    -ms-transform: translateY(50px);
-    transform: translateY(50px);
-}
-
-.cd-main-nav__list a {
+.navbar-list a {
     display: block;
     height: 50px;
     line-height: 50px;
@@ -97,20 +85,20 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
 }
 
 @media only screen and (min-width: 400px) {
-    .cd-main-header {
+    .header {
         height: 5em;
     }
-    .cd-main-header__logo {
+    .header-logo {
         margin: 0 0 5% 5%;
     }
-    .cd-main-nav {
+    .navbar {
         /* reset style */
         width: auto;
         height: auto;
         background: none;
         cursor: auto;
     }
-    .cd-main-nav__list {
+    .navbar-list {
         /* reset style */
         position: static;
         width: auto;
@@ -119,17 +107,17 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
         transform: translateY(0);
         line-height: 50px;
     }
-    .cd-main-nav__list.cd-main-nav__list--is-visible {
+    .navbar-list.navbar-list--is-visible {
         /* reset style */
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
     }
-    .cd-main-nav__list li {
+    .navbar-list li {
         display: inline-block;
         margin-left: 1em;
     }
-    .cd-main-nav__list a {
+    .navbar-list a {
         display: inline-block;
         /*height: auto;*/
         line-height: normal;
@@ -141,21 +129,22 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
         font-weight: bold;
         font-size: 1.4rem;
     }
-    .cd-main-nav__list a:hover {
+    .navbar-list a:hover {
         color: #ff93f5;
     }
 }
 
-.cd-fixed-bg {
+.background {
     position: relative;
     min-height: 100vh;
-    background-size: 90%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
+    background-color: #8c868e;
 }
 
-.cd-fixed-bg__content, .cd-fixed-bg h2 {
+.background__content, .background h2 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -171,83 +160,69 @@ Alternate Fixed & Scroll Backgrounds - by CodyHouse.co
     font-size: 3rem;
 }
 
-.cd-fixed-bg h1, .cd-fixed-bg h2 {
+.background h1, .background h2 {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     color: white;
     font-size: 3rem;
 }
 
-.cd-fixed-bg.cd-fixed-bg--1 {
-    background-image: url("../img/background1.jpg");
+.background.background--1 {
+    background-image: url("../img/brewery.jpg");
 }
 
-.cd-fixed-bg.cd-fixed-bg--2 {
+.background.background--2 {
     background-image: url("../img/background4.jpg");
 }
 
-.cd-fixed-bg.cd-fixed-bg--3 {
+.background.background--3 {
     background-image: url("../img/background3.PNG");
 }
 
-.cd-fixed-bg.cd-fixed-bg--4 {
+.background.background--4 {
     background-image: url("../img/up-at-night.jpg");
 }
 
 @media only screen and (min-width: 768px) {
-    .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    .background h1, .background h2 {
         font-size: 3.6rem;
     }
 }
 
 @media only screen and (min-width: 1170px) {
-    .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    .background h1, .background h2 {
         font-size: 4.8rem;
         font-weight: 300;
     }
     @supports (background-attachment: fixed) {
         /* fix bug on IE11 and below */
-        .cd-fixed-bg {
+        .background {
             background-attachment: fixed;
         }
     }
 }
 
-.cd-scrolling-bg {
+.scrolling-background {
     position: relative;
     min-height: 100%;
     height: auto;
     overflow: hidden;
     padding: 4em 0;
     line-height: 1.6;
-    -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     z-index: 2;
-}
-
-.cd-scrolling-bg.cd-scrolling-bg--color-1 {
-    background-color: #a5d1ff;
-    color: #3d3536;
-}
-
-.cd-scrolling-bg.cd-scrolling-bg--color-2 {
-    background-color: rgba(255, 37, 239, 0.37);
-    color: #3d3536;
-}
-
-.cd-scrolling-bg.cd-scrolling-bg--color-3 {
-    background-color: rgba(51, 255, 0, 0.41);
+    background-color: #f2f7f5;
     color: #3d3536;
 }
 
 
-.cd-scrolling-bg__content {
+.scrolling-background__content {
     width: 90%;
     max-width: 768px;
     margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
-    .cd-scrolling-bg {
+    .scrolling-background {
         padding: 8em 0;
         font-size: 2rem;
         line-height: 2;
