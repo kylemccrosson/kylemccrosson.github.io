@@ -13,19 +13,14 @@
     <link href="./dist/css/stylesheet.css" rel="stylesheet"/>
   </head>
 
-  <body>
-  <header class="cd-main-header">
+  <body ng-app="siteApp">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+  <header class="cd-main-header" ng-controller="headerController">
     <div class="cd-main-header__logo"><a href="#0" id="logo">K</a></div>
     <nav class="cd-main-nav js-main-nav">
-      <ul class="cd-main-nav__list">
-        <!-- inser more links here -->
-        <li><a href="#0">Home</a></li>
-        <li><a href="#1">Music</a></li>
-        <li><a href="#2">Sound Design</a></li>
-        <li><a href="https://northeastern-ds-4200-f19.github.io/project-team-9-pedestrians">Data Viz</a></li>
-        <!--<li><a href="#0">Theater</a></li>-->
-        <!--<li><a href="#0">Recording</a></li>-->
-        <li><a href="#4">Contact</a></li>
+      <ul class="cd-main-nav__list" >
+        <li ng-repeat="(key, value) in sections"><a href="{{value}}">{{ key }}</a></li>
       </ul>
     </nav> <!-- cd-main-nav -->
   </header>
@@ -117,7 +112,7 @@
         <!-- cd-scrolling-bg__content -->
     </div> <!-- cd-scrolling-bg -->
 
-    <div class="cd-fixed-bg cd-fixed-bg--4" id="4">
+    <div class="cd-fixed-bg cd-fixed-bg--4" id="3">
       <h2>Contact</h2>
     </div> <!-- cd-fixed-bg -->
 
@@ -144,5 +139,6 @@
   </main>
   <script src="./dist/js/main.js"></script> <!-- Resource JavaScript -->
   <script src="./dist/js/navbar-toggling.js"></script>
+  <script src="./dist/js/headerController.js"></script>
   </body>
 </html>
