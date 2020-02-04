@@ -11,6 +11,9 @@ app.config(function($routeProvider) {
     .when('/sound_design', {
       templateUrl: 'dist/html/sound-design-page.html'
     })
+    .when('/contact', {
+      templateUrl: 'dist/html/contact-page.html'
+    })
 });
 
 app.controller('headerController', function($scope) {
