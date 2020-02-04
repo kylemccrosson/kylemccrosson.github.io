@@ -19,11 +19,11 @@
 
   <header class="header" ng-controller="headerController">
     <div class="header-logo"><a href="#/!" id="logo">K</a></div>
-    <nav class="navbar js-main-nav">
+    <nav class="navbar main-nav">
       <ul class="navbar-list">
         <li ng-repeat="(key, value) in sections"><a href="{{value}}">{{ key }}</a></li>
       </ul>
-    </nav> <!-- navbar -->
+    </nav>
   </header>
 
   <main ng-view></main>

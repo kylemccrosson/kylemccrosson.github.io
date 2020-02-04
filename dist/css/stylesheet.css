@@ -33,10 +33,9 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 5em;
+    overflow: visible;
     background: rgba(255, 255, 255, 0.95);
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 3;
 }
@@ -50,7 +49,7 @@ a {
 
 .header-logo {
     float: left;
-    margin: 0 0 0 5%;
+    margin: 0 0 5% 5%;
 }
 
 .header-logo img {
@@ -67,24 +66,29 @@ a {
     cursor: pointer;
 }
 
+
 .navbar-list {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: -5em;
+    right: 0;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.95);
+    list-style-type: none;
 }
 
 .navbar-list a {
     display: block;
     height: 50px;
     line-height: 50px;
-    padding-left: 5%;
-    background: #2f292a;
+    padding-right: 5%;
     border-top: 1px solid #453c3d;
-    color: #8e7d7f;
+    color: #3d3536;
+}
+.navbar-list a:hover {
+    color: #ff93f5;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 700px) {
     .header {
         height: 5em;
     }
@@ -102,16 +106,8 @@ a {
         /* reset style */
         position: static;
         width: auto;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
         line-height: 50px;
-    }
-    .navbar-list.navbar-list--is-visible {
-        /* reset style */
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
+        background-color: transparent;
     }
     .navbar-list li {
         display: inline-block;
@@ -137,7 +133,7 @@ a {
 .background {
     position: relative;
     min-height: 100vh;
-    background-size: 50%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
@@ -180,6 +176,10 @@ a {
 
 .background.background--4 {
     background-image: url("../img/up-at-night.jpg");
+}
+
+.background.background--5 {
+    background-image: url("../img/background1.jpg");
 }
 
 @media only screen and (min-width: 768px) {

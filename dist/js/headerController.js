@@ -1,5 +1,8 @@
+
+/** Define the angular app */
 let app = angular.module('siteApp', ["ngRoute"]);
 
+/** Associate intra-site hyperlinks with the correct HTML code */
 app.config(function($routeProvider) {
   $routeProvider
     .when("/", {
@@ -16,7 +19,8 @@ app.config(function($routeProvider) {
     })
 });
 
-app.controller('headerController', function($scope) {
+/** Define the controller for the header */
+app.controller('headerController', function($scope, $window) {
 
   $scope.sections = {
     'Home': "#/!",
