@@ -6,7 +6,7 @@
     mainNav.addEventListener('click', function(event){
       if( hasClass(event.target, 'js-main-nav') ){
         var navList = mainNav.getElementsByTagName('ul')[0];
-        toggleClass(navList, 'cd-main-nav__list--is-visible', !hasClass(navList, 'cd-main-nav__list--is-visible'));
+        toggleClass(navList, 'navbar-list--is-visible', !hasClass(navList, 'navbar-list--is-visible'));
       }
     });
   }

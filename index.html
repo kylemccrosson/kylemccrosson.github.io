@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="siteApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,131 +13,21 @@
     <link href="./dist/css/stylesheet.css" rel="stylesheet"/>
   </head>
 
-  <body ng-app="siteApp">
+  <body>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
 
-  <header class="cd-main-header" ng-controller="headerController">
-    <div class="cd-main-header__logo"><a href="#0" id="logo">K</a></div>
-    <nav class="cd-main-nav js-main-nav">
-      <ul class="cd-main-nav__list" >
+  <header class="header" ng-controller="headerController">
+    <div class="header-logo"><a href="#/!" id="logo">K</a></div>
+    <nav class="navbar main-nav">
+      <ul class="navbar-list">
         <li ng-repeat="(key, value) in sections"><a href="{{value}}">{{ key }}</a></li>
       </ul>
-    </nav> <!-- cd-main-nav -->
+    </nav>
   </header>
 
-  <main>
-    <div class="cd-fixed-bg cd-fixed-bg--1" id="0">
-      <div class="cd-fixed-bg__content">
-        <h1>Kyle McCrosson</h1>
-        <h1>Web Design. Songwriting. Sound Design. Recording.</h1>
-      </div>
-    </div> <!-- cd-fixed-bg -->
+  <main ng-view></main>
 
-    <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
-      <div class="cd-scrolling-bg__content">
-        <p>
-          Kyle McCrosson is a senior at Northeastern University, currently pursuing a combined degree in
-          Computer Science and Music Composition/Technology. He is expecting to graduate in the Spring of 2020.
-          He enjoys spending his free time writing, recording, and producing music for himself and his friends.
-        </p>
-      </div> <!-- cd-scrolling-bg__content -->
-    </div> <!-- cd-scrolling-bg -->
-
-    <div class="cd-fixed-bg cd-fixed-bg--2" id="1">
-      <h2>Music</h2>
-    </div> <!-- cd-fixed-bg -->
-
-    <div class="cd-scrolling-bg cd-scrolling-bg--color-3">
-      <div class="cd-scrolling-bg__content">
-
-          <p class="left-aligned">
-            Kyle wrote, recorded, and produced his first EP, Look At Me, and released it in September 2018 under the name
-            Kale. He recorded the vocals in the basement of his childhood home and produced the songs using ProTools.
-            Instrumentals were created using a piano, a microKorg, and a variety of software synths. It is now
-            available for streaming and purchase on
-            <a href="https://open.spotify.com/artist/2z6VdvsPkCV5viCdOfDZGq?si=lGBhCV5QTbSts3i955cCzA">Spotify</a>,
-            Apple
-              Music, iTunes, and anywhere else music is
-            available.
-            Following his first EP, he took some time to focus and polish his recording, production, and songwriting
-            skills both on his own, and while working an internship at a recording studio in Cambridge, MA. He has since
-            released two more singles and has a lot more on the way!
-          </p>
-          <div class="media">
-            <iframe src="https://open.spotify.com/embed/playlist/3CsXO21tlkEoX2RAkJnfqC" width="300" height="380"
-                    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          </div>
-
-      </div> <!-- cd-scrolling-bg__content -->
-    </div> <!-- cd-scrolling-bg -->
-
-    <div class="cd-fixed-bg cd-fixed-bg--3" id="2">
-      <h2>Sound Design Projects</h2>
-    </div> <!-- cd-fixed-bg -->
-
-    <div class="cd-scrolling-bg cd-scrolling-bg--color-1">
-      <div class="cd-scrolling-bg__content">
-        <p>
-          While taking a Sound Design course, Kyle had the opportunity to record, design, and compose the sound effects
-          and soundtracks for a series of silent videos. He learned how to give a sound perspective, how to be creative
-          while finding materials to record sound effects, and how to use sounds and music to create a cohesive story.
-        </p>
-        <hr>
-        <iframe src="https://player.vimeo.com/video/288274191" width="640" height="480" frameborder="0"
-                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <p>
-          Kyle worked in a group of three and had about a week to complete the sound design, given 'Inside the Body'
-          with no sounds at all. He designed the heartbeat, electrical buzz, the siren, the cave ambience, the sounds
-          of the levers, chains, and chair. He also recorded and designed the footsteps and the vocalizations.
-        </p>
-        <hr>
-        <iframe src="https://player.vimeo.com/video/288274998" width="640" height="427" frameborder="0"
-                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <p>
-          Kyle worked by himself and had about two weeks to complete the sound design, given a completely silent
-          version of 'Otsu'. He composed and recorded the music using MIDI. He also designed all sounds in the entirety
-          of the piece (some recorded by him- most metallic or garbage sounds- and others created from royalty-free
-          sound effects).
-        </p>
-        <hr>
-        <iframe src="https://player.vimeo.com/video/288276305" width="640" height="427" frameborder="0"
-                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <p>
-          Kyle worked in a group of three and had about a week to complete the sound design for this piece, given
-          'Crossing Guard' with no sound. He composed and recorded the music using MIDI (except for the rock song
-          at the end), created the footstep sounds, recorded and edited all vocalizations, and assisted with the truck
-          noise.
-        </p>
-      </div>
-        <!-- cd-scrolling-bg__content -->
-    </div> <!-- cd-scrolling-bg -->
-
-    <div class="cd-fixed-bg cd-fixed-bg--4" id="3">
-      <h2>Contact</h2>
-    </div> <!-- cd-fixed-bg -->
-
-    <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
-      <div class="cd-scrolling-bg__content">
-        <p>Contact Information:</p>
-        <table>
-          <tr>
-            <td>Email:</td><td>kpmccrosson@gmail.com</td>
-          </tr>
-          <tr>
-            <td>Phone:</td><td>(631) 901-3765</td>
-          </tr>
-          <tr>
-            <td>Address:</td><td>9 Alleghany St, Apt 1</td>
-          </tr>
-          <tr>
-            <td></td><td>Boston, MA 02120</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-  </main>
-  <script src="./dist/js/main.js"></script> <!-- Resource JavaScript -->
   <script src="./dist/js/navbar-toggling.js"></script>
   <script src="./dist/js/headerController.js"></script>
   </body>
