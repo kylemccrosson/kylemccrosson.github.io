@@ -1,0 +1,17 @@
+.Content {
+    float: right;
+    display: inline-block;
+    width: 40%;
+}
+
+.Content img {
+    width: 85%;
+    margin: 2em auto 0 auto;
+}
+
+@media only screen and (max-width: 850px) {
+    .Content {
+        float: none;
+        width: 100%
+    }
+}
