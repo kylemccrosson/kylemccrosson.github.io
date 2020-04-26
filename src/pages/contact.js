@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 export default () =>
   <Layout>
     <div>
-      <Header/>
+      <Header page={'contact'}/>
       <p>
         School Email:<br/>
         mccrosson.k@husky.neu.edu

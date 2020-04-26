@@ -14,15 +14,15 @@ export default ({page}) => {
 
     <h1>Kyle McCrosson</h1>
     <ul>
-      <NavLink id='about' to='/'>About</NavLink>
-      <NavLink id='music' to='/music/'>Music</NavLink>
-      <NavLink id='soundDesign' to='/sound-design/'>Sound Design</NavLink>
+      <NavLink isCurrent={page === 'about'} id='about' to='/'>About</NavLink>
+      <NavLink isCurrent={page === 'music'} id='music' to='/music/'>Music</NavLink>
+      <NavLink isCurrent={page === 'sound'} id='soundDesign' to='/sound-design/'>Sound Design</NavLink>
       <a href='https://northeastern-ds-4200-f19.github.io/project-team-9-pedestrians/'
          target='_blank'
          rel='noopener noreferrer'>
         Data Viz
       </a>
-      <NavLink to='/contact/'>Contact</NavLink>
+      <NavLink isCurrent={page === 'contact'} to='/contact/'>Contact</NavLink>
     </ul>
     <hr/>
   </div>);

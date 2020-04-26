@@ -5,12 +5,13 @@ import Layout from '../components/layout'
 export default () =>
   <Layout>
     <div>
-      <Header/>
+      <Header page={'sound'}/>
       <h1>Physical Modeling Synthesis of Birdcall</h1>
       <iframe width="80%"
               height="300"
               scrolling="no"
               frameBorder="no"
+              title='digital_forest'
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/794625619%3Fsecret_token%3Ds-67IWn06lWe1&color=%2313172a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"/>
       <p>
         My music technology capstone project was research into the synthesis of birdcall and birdsong. I used the
@@ -23,7 +24,7 @@ export default () =>
       <hr/>
       <h1>Invasion</h1>
       <iframe src="https://player.vimeo.com/video/333603991" width="100%" height="360" frameBorder="0"
-              allow="fullscreen" allowFullScreen/>
+              allow="fullscreen" title='Invasion' allowFullScreen/>
       <p>
         ‘Invasion’ is a short animated film created by Victoria Barranco, a senior at Northeastern at the time,
         who asked me to design the sound effects for the animation. Barranco created this film as part of her
@@ -35,8 +36,8 @@ export default () =>
       </p>
       <hr/>
       <h1>Inside the Body</h1>
-      <iframe src="https://player.vimeo.com/video/288274191" width="100%" height="480" frameBorder="0"
-              webkitallowfullscreen mozallowfullscreen allowFullScreen/>
+      <iframe src="https://player.vimeo.com/video/288274191" title='Inside the Body' width="100%" height="480" frameBorder="0"
+               allowFullScreen/>
       <p>
         While taking a Sound Design course, I had the opportunity to record, design, and compose the sound effects
         and soundtracks for a series of silent videos. I learned how to give a sound perspective, how to be creative
@@ -47,8 +48,8 @@ export default () =>
       </p>
       <hr/>
       <h1>Otsu</h1>
-      <iframe src="https://player.vimeo.com/video/288274998" width="100%" height="427" frameBorder="0"
-              webkitallowfullscreen mozallowfullscreen allowFullScreen/>
+      <iframe src="https://player.vimeo.com/video/288274998" title='Otsu' width="100%" height="427" frameBorder="0"
+               allowFullScreen/>
       <p>
         I worked by myself and had about two weeks to complete the sound design, given a completely silent version of
         'Otsu'. I composed and recorded the music using MIDI software instruments. I also designed all sounds in the

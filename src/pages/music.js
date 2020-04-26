@@ -7,10 +7,10 @@ import RightFloatContent from '../components/rightFloatContent'
 export default () =>
   <Layout>
     <div>
-      <Header/>
+      <Header page={'music'}/>
       <RightFloatContent>
         <iframe src="https://open.spotify.com/embed/playlist/3CsXO21tlkEoX2RAkJnfqC" width="300" height="380"
-                frameBorder="0" allow="encrypted-media"/>
+                frameBorder="0" allow="encrypted-media" title='All Kale'/>
       </RightFloatContent>
 
       <LeftFloatText>

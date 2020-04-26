@@ -2,7 +2,7 @@
 
 .content {
     font-family: 'Heebo', sans-serif;
-    margin: 2em;
+    margin: 1em;
     color: #000000
 }
 
@@ -21,7 +21,7 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-.current a:link, .current a:visited{
+.current a {
     color: #ff4aec;
 }
 
@@ -36,6 +36,13 @@ hr {
 }
 
 iframe {
-    margin: 2em auto 0 auto;
+    margin: 1em auto 0 auto;
     display: block;
+}
+
+@media only screen and (max-width: 500px) {
+    p {
+        line-height: 1.5em;
+        margin: 2em 1em 1em 1em;
+    }
 }
